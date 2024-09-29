@@ -19,7 +19,7 @@
 #include <net/udp.h>
 #include <net/sock.h>
 
-u32 wg_get_random_u32_inclusive(u32 floor, u32 ceil)
+static u32 wg_get_random_u32_inclusive(u32 floor, u32 ceil)
 {
 	u32 diff = ceil - floor + 1;
 	return floor + (get_random_u32() % diff);
